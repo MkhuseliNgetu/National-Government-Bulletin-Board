@@ -1,0 +1,46 @@
+<div style="text-align:center">
+<h1>Login</h1>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/dynamic-forms.php
+    //Author: W3resource
+-->
+<form (submit)="Login(NewLogin)" #NewLogin="ngForm" style="text-align:center" enctype="multipart/form-data">
+<label><b>Enter a username: </b></label>
+<!--
+    //This programming statement was adapted from Tutsplus:
+    //Link: https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    //Author: Monty Shokeen
+    //Author Profile Link: https://tutsplus.com/authors/monty-shokeen
+-->
+<input type="text" ngModel name="SuppliedEmployeeUserName" required #SuppliedEmployeeUserName="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter you username here"/>
+<br/>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/form-validation.php
+    //Author: W3resource
+-->
+<div *ngIf="SuppliedEmployeeUserName.invalid &&(SuppliedEmployeeUserName.dirty || SuppliedEmployeeUserName.touched)">Username cannot be left empty!</div>    
+<br/>
+<label><b>Enter a password: </b></label>
+<!--
+    //This programming statement was adapted from Tutsplus:
+    //Link: https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    //Author: Monty Shokeen
+    //Author Profile Link: https://tutsplus.com/authors/monty-shokeen
+-->
+<input type="password" ngModel name="SuppliedEmployeePassword" required #SuppliedEmployeePassword="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter you password here"/>
+<br/>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/form-validation.php
+    //Author: W3resource
+-->
+<div *ngIf="SuppliedEmployeePassword.invalid &&(SuppliedEmployeePassword.dirty || SuppliedEmployeePassword.touched)">Password cannot be left empty!</div> 
+<br/>
+<button type="submit" size="15" name="Login">Login</button>
+</form>
+
+
+
+</div>

@@ -1,0 +1,73 @@
+<head> 
+<title> Bulletin Board</title>
+</head>
+<!--
+  //This programming statement has been adapted from W3Schools:
+  //Link: https://www.w3schools.com/TAgs/tag_nav.asp
+  //Author: W3Schools
+-->
+<nav style="text-align:center">
+  <!--
+    //This programming statement have been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+   -->
+  <a routerLink="/SignUp">Registration</a>
+  <br/>
+  <!--
+    //This programming statement have been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+  -->
+  <a routerLink="/Login">Login</a>
+  <br/>
+  <!--
+    //This programming statement have been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+  -->
+  <a routerLink="/AddPost">Add Post</a>
+  <br/>
+  <!--
+    //This programming statements have been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+  -->
+  <a routerLink="/GetPost">Get Post</a>
+  <br/>
+  <!--
+    //This programming statements have been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+  -->
+  <a routerLink="/DeletePost">Remove Post</a>
+  <br/>
+ 
+
+<body>
+
+  <div class="HomePage" style="text-align:center">
+
+    <h1> Welcome to the Bulletin Board</h1>
+
+    <p>To register as user to gain access to the Bulletin Board features, click on 'Register'.</p>
+    <p>To gain access to the Bulletin Board as an existing user, click on 'Login'.</p>
+    <p>To create a new post, click on 'Add Post'.</p>
+    <p>To display posts, click on 'Get Post'.</p>
+    <p>To delete a post, click on 'Remove Post'.</p>
+   <hr>
+
+  </div>
+
+  <div class="UserInteraction" style="text-align:center">
+    <!--
+    //This programming statement has been adapted from Itsolutionstuff:
+    //Link: https://www.itsolutionstuff.com/post/how-to-create-routing-module-in-angular-11example.html
+    //Author: Hardik Savani
+    -->
+    <router-outlet></router-outlet>
+
+  </div>
+
+</body>
+

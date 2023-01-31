@@ -1,0 +1,53 @@
+//Bulletin Board User Related Functions
+POST https://localhost:3000/api/users/SignUp HTTP/1.1
+content-type: application/json 
+
+{
+    "EmployeeUsername": "Elvis Denton",
+    "EmployeePassword": "FZ#1213435*@OP"
+    
+}
+###
+POST https://localhost:3000/api/users/Login HTTP/1.1
+content-type: application/json 
+
+{
+    "EmployeeUsername": "Elvis Denton",
+    "EmployeePassword": "FZ#1213435*@OP"
+    
+}
+
+
+//Bulletin Board Post Related Functions
+###
+POST https://localhost:3000/api/post/AddPost HTTP/1.1
+content-type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6IkVsdmlzIERlbnRvbiIsIlVzZXJJZCI6IjYzNDQ5MTgyNWE0OGEwYzdkMTM0M2NiNyIsImlhdCI6MTY2NTQzODM2OSwiZXhwIjoxNjY1NDQxOTY5fQ.VudTxQwnrwUWT3Wol5hOFrEYUOoTSYEqbHrSZLT98PI
+
+{
+    "ID":"36",
+    "Title":"Engravings",
+    "Details": "Belts with a engraved silver buckle is prohibited. By Order Of Upper Management"
+    
+}
+
+###
+GET https://localhost:3000/api/post/GetPost HTTP/1.1
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6IkVsdmlzIERlbnRvbiIsIlVzZXJJZCI6IjYzNDQ5MTgyNWE0OGEwYzdkMTM0M2NiNyIsImlhdCI6MTY2NTQzODM2OSwiZXhwIjoxNjY1NDQxOTY5fQ.VudTxQwnrwUWT3Wol5hOFrEYUOoTSYEqbHrSZLT98PI
+
+{ 
+    "Title":"Engravings"
+}
+###
+DELETE https://localhost:3000/api/post/RemovePost/6341aa52390b8721adfbf16e HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6IkVsdmlzIERlbnRvbiIsIlVzZXJJZCI6IjYzNDQ5MTgyNWE0OGEwYzdkMTM0M2NiNyIsImlhdCI6MTY2NTQzODM2OSwiZXhwIjoxNjY1NDQxOTY5fQ.VudTxQwnrwUWT3Wol5hOFrEYUOoTSYEqbHrSZLT98PI
+
+
+
+
+
+
+
+
+

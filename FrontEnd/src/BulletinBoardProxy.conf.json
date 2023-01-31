@@ -1,0 +1,21 @@
+{
+  "Code Attribution": {
+    "Title": "The following programming statements were adapted from Levelup:",
+    "Link": "https://levelup.gitconnected.com/fixing-cors-errors-with-angular-cli-proxy-e5e0ef143f85",
+    "Author": "Damilare A. Adedoyin",
+    "Author Profile Link": "https://medium.com/@damilareaadedoyin"
+  },
+  "/api/*": {
+        "target": "https://localhost:3000",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+
+          "^/api": ""
+        }  
+     
+    }
+    
+}
+

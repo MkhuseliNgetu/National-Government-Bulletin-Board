@@ -1,0 +1,85 @@
+<div style="text-align:center">
+<h1> Create Post</h1>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/dynamic-forms.php
+    //Author: W3resource
+-->
+<form (ngSubmit)="NewPost(AddPost)" #AddPost="ngForm" style="text-align:center" enctype="multipart/form-data">
+<label><b>Enter a ID for your post: </b></label>
+<br/>  
+<!--
+    //This programming statement was adapted from Tutsplus:
+    //Link: https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    //Author: Monty Shokeen
+    //Author Profile Link: https://tutsplus.com/authors/monty-shokeen
+-->
+<input type="text" ngModel name="SuppliedPostID" size="25" required #SuppliedPostID="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter a ID for your post here"/>  
+<br/>  
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/form-validation.php
+    //Author: W3resource
+-->
+<div *ngIf="SuppliedPostID.invalid &&(SuppliedPostID.dirty || SuppliedPostID.touched)">The ID of the post cannot be empty!</div> 
+<br/>
+<label><b>Enter a title for your post: </b></label>
+<br/>  
+<!--
+    //This programming statement was adapted from Tutsplus:
+    //Link: https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    //Author: Monty Shokeen
+    //Author Profile Link: https://tutsplus.com/authors/monty-shokeen
+-->
+<input type="text" ngModel name="SuppliedPostTitle" size="25" required #SuppliedPostTitle="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter a title for your post here"/>
+<br/>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/form-validation.php
+    //Author: W3resource
+-->
+<div *ngIf="SuppliedPostTitle.invalid &&(SuppliedPostTitle.dirty || SuppliedPostTitle.touched)">The title of the post cannot be empty!</div> 
+<br/>
+<label><b>Enter the details of your post: </b></label>
+<br/>  
+<!-- 
+    //This programming statement was adapted from W3docs:
+    //Link: https://www.w3docs.com/snippets/html/how-to-set-the-size-of-the-textarea-element.html
+    //Author: W3Schools
+-->
+<textarea ngModel name="SuppliedPostDetails" rows="6" cols="50" required #SuppliedPostDetails="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter the details for your post here" ></textarea>
+<br/>
+<!-- 
+    //This programming statement was adapted from W3docs:
+    //Link: https://www.w3docs.com/snippets/html/how-to-set-the-size-of-the-textarea-element.html
+    //Author: W3Schools
+-->
+<div *ngIf="SuppliedPostDetails.invalid &&(SuppliedPostDetails.dirty || SuppliedPostDetails.touched)">The details of the post cannot be empty!</div> 
+<br/>      
+<button type="submit" size="15" name="Create"> Create Post! </button> 
+<br/>       
+</form>
+
+
+</div>
+
+<div class="Display Data">
+    <!--
+        //This programming statement was adapted from FreeCodeCamp:
+        //Link: https://www.freecodecamp.org/news/angular-ngfor-and-ngif-explained/
+        //Author: Nishant Kumar
+        //Author Profile Link: https://www.freecodecamp.org/news/author/nishant-kumar/
+    -->
+    <div *ngIf="Posts.length>1">
+   <!--
+        //This programming statement was adapted from StackOverflow:
+        //Link: https://stackoverflow.com/questions/46087785/display-subscribe-data-in-angular-4
+        //Author: Piyush Patel
+        //Author Profile Link: https://stackoverflow.com/users/7614848/piyush-patel
+    -->
+    <pre>{{Posts|json}}</pre>
+    </div>
+   
+
+    
+</div>

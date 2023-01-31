@@ -1,0 +1,28 @@
+//This programming statement was adapted from GeeksForGeeks:
+//Link: https://www.geeksforgeeks.org/jwt-authentication-with-node-js/
+//Author: GeeksForGeeks
+const JWT = require('jsonwebtoken');
+
+module.exports=(req,res,next)=>{
+
+
+    try{
+        //This programming statement was adapted from Jason Watmore's Blog
+        //Link: https://jasonwatmore.com/post/2018/09/24/nodejs-basic-authentication-tutorial-with-example-api
+        //Author: Jason Watmore
+        //Auhtor Profile Link: https://jasonwatmore.com/contact
+        const AuthToken = req.headers.authorization.split(" ")[1];
+        //This programming statement was adapted from GeeksForGeeks:
+        //Link: https://www.geeksforgeeks.org/jwt-authentication-with-node-js/
+        //Author: GeeksForGeeks
+        JWT.verify(AuthToken,"National Government Bulletin Board")
+        next();
+       
+    }catch(error){
+        //This programming statement was adapted from OpenClassrooms:
+        //Link: https://openclassrooms.com/en/courses/5614116-go-full-stack-with-node-js-express-and-mongodb/5656206-create-a-post-route
+        //Author: Will Alexander, Colleen Brady
+        res.status(401).json({Message:"Invalid token" });
+
+    }
+};

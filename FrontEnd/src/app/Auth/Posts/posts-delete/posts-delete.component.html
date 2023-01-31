@@ -1,0 +1,37 @@
+<div style="text-align:center">
+<h1>Delete Post</h1>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/dynamic-forms.php
+    //Author: W3resource
+-->
+<form (ngSubmit)="RemovePost(DeletePost)" #DeletePost="ngForm" style="text-align:center" enctype="multipart/form-data">
+<label><b>Enter the ID of of post you wish to delete: </b></label>
+<!--
+    //This programming statement was adapted from Tutsplus:
+    //Link: https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    //Author: Monty Shokeen
+    //Author Profile Link: https://tutsplus.com/authors/monty-shokeen
+-->
+<input type="text" ngModel name="IdOfPostToBeRemoved" required #IdOfPostToBeRemoved="ngModel" minlength="1" pattern="^[\w-\.}+@([\w-]+\.)+[\w-]{2,4}$" placeholder="Enter a ID for your post here"/>
+<br/>
+<!--
+    //This programming statement was adapted from W3resource:
+    //Link: https://www.w3resource.com/angular/form-validation.php
+    //Author: W3resource
+-->
+<div *ngIf="IdOfPostToBeRemoved.invalid &&(IdOfPostToBeRemoved.dirty || IdOfPostToBeRemoved.touched)">The ID of the post cannot be empty!</div>     
+<br/>
+<button type="submit" size="20" name="Remove">Delete Post</button>        
+</form>
+</div>
+
+<div>
+     <!--
+        //This programming statement was adapted from StackOverflow:
+        //Link: https://stackoverflow.com/questions/46087785/display-subscribe-data-in-angular-4
+        //Author: Piyush Patel
+        //Author Profile Link: https://stackoverflow.com/users/7614848/piyush-patel
+    -->
+    {{Posts|json}}
+</div>
