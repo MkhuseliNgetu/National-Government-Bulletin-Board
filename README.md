@@ -17,4 +17,6 @@ IDE/Coding Platform: Visual Studio Code.\
 Storage: More than 20 MB\
 RAM: 8GB+\
 Misc. Software: Node.js, Mongoose\
-A functional keyboard.* 
+A functional keyboard.*
+
+
