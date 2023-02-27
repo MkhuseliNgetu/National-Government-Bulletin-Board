@@ -19,4 +19,13 @@ RAM: 8GB+\
 Misc. Software: Node.js, Mongoose\
 A functional keyboard.*
 
+--How to compile
+--How to compile the server (Backend)
+1. Open Visual Studio Code.
+2. Press CTRL+K AND CTRL+O on your keyboard.
+3. Look for the folder named National Government Bulletin Board and select the folder named National Government Bulletin Board.
+4. Wait for the program to load.
+5. Press CTRL+` on your keyboard at the same time on your keyboard, to compile the terminal.
+6. Wait for the terminal to load.
+7. Enter cd BackEnd to change the location the terminal need to operate within.
 
