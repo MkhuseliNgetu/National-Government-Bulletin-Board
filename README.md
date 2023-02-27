@@ -29,4 +29,3 @@ A functional keyboard.*
 6. Wait for the terminal to load.
 7. Enter cd BackEnd to change the location the terminal needs to operate within.
 8. Enter npm install to add the needed libraries for the server to function.
-
