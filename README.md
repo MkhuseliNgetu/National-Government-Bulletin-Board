@@ -27,5 +27,5 @@ A functional keyboard.*
 4. Wait for the program to load.
 5. Press CTRL+` on your keyboard at the same time on your keyboard, to compile the terminal.
 6. Wait for the terminal to load.
-7. Enter cd BackEnd to change the location the terminal need to operate within.
+7. Enter cd BackEnd to change the location the terminal needs to operate within.
 
